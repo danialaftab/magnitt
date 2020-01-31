@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Feed } from 'semantic-ui-react'
 
 const CardExampleContentBlock = () => (
-  <Card>
+  <Card fluid>
     <Card.Content>
       <Card.Header>Recent Activity</Card.Header>
     </Card.Content>

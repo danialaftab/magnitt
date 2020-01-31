@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
+import { Menu, Segment, Dropdown, Button } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 import Search from './Search'
 
@@ -37,7 +37,24 @@ export default class MenuExampleInvertedSecondary extends Component {
                             onClick={this.handleItemClick}
                         />
                     </Link>
-                    <Search />
+
+                    {/* <Menu.Item> */}
+                        <Search />
+                    {/* </Menu.Item>     */}
+
+                    <Menu.Menu position='right' >
+                        <Dropdown item text='Using as' >
+                            <Dropdown.Menu>
+                                <Dropdown.Item>Danial Aftab</Dropdown.Item>
+                                <Dropdown.Item>Acme inc</Dropdown.Item>
+                                <Dropdown.Item>Spanish</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Menu.Item>
+                            <Button primary>Log out</Button>
+                        </Menu.Item>
+                    </Menu.Menu>
                 </Menu>
             </Segment>
         )

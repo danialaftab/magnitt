@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Label, Menu } from 'semantic-ui-react'
+import { Input, Label, Menu, Image, Feed } from 'semantic-ui-react'
 
 export default class MenuExampleSizeVerticalLarge extends Component {
     state = { activeItem: 'inbox' }
@@ -19,7 +19,10 @@ export default class MenuExampleSizeVerticalLarge extends Component {
                     active={activeItem === 'inbox'}
                     onClick={this.handleItemClick}
                 >
+
                     <Label color='teal'>1</Label>
+                    
+                    <Image src={'/avatars/small/elliot.jpg'} size='mini' />
                     Matt Murdock
         </Menu.Item>
 
@@ -28,7 +31,8 @@ export default class MenuExampleSizeVerticalLarge extends Component {
                     active={activeItem === 'spam'}
                     onClick={this.handleItemClick}
                 >
-                    <Label>51</Label>
+                    {/* <Label>51</Label> */}
+                    <Image src={'/avatars/small/elliot.jpg'} size='mini' />
                     Peter Parker
         </Menu.Item>
 
@@ -37,7 +41,8 @@ export default class MenuExampleSizeVerticalLarge extends Component {
                     active={activeItem === 'updates'}
                     onClick={this.handleItemClick}
                 >
-                    <Label>1</Label>
+                    {/* <Label>1</Label> */}
+                    <Image src={'/avatars/small/elliot.jpg'} size='mini' />
                     Dany Aftab
         </Menu.Item>
 
