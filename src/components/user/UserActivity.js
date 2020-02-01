@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Feed } from 'semantic-ui-react'
 
-const CardExampleContentBlock = () => (
+const CardExampleContentBlock = (props) => (
   <Card fluid>
     <Card.Content>
       <Card.Header>Recent Activity</Card.Header>
@@ -13,7 +13,7 @@ const CardExampleContentBlock = () => (
           <Feed.Content>
             <Feed.Date content='1 day ago' />
             <Feed.Summary>
-              You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+              {props.user.name} added <a>Jenny Hess</a> to your <a>coworker</a> group.
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>
@@ -23,7 +23,7 @@ const CardExampleContentBlock = () => (
           <Feed.Content>
             <Feed.Date content='3 days ago' />
             <Feed.Summary>
-              You added <a>Molly Malone</a> as a friend.
+              {props.user.name} added <a>Molly Malone</a> as a friend.
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>
@@ -33,7 +33,7 @@ const CardExampleContentBlock = () => (
           <Feed.Content>
             <Feed.Date content='4 days ago' />
             <Feed.Summary>
-              You added <a>Elliot Baker</a> to your <a>musicians</a> group.
+              {props.user.name} added <a>Elliot Baker</a> to your <a>musicians</a> group.
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>

@@ -10,15 +10,11 @@ class SearchComponent extends Component {
   state = initialState
   
   resultRenderer = (user) => {
-    console.log("RR: ", user)
     return(
-      <Link to={`/user/${user.userId}`}><Label content={user.name} /></Link>
+      <a href={`/user/${user.userId}`}><Label content={user.name} /></a>
     )
   }
 
-  static getDerivedStateFromProps(nextProps, prevState){
-      console.log("nextProps: ", nextProps)
- }
 
   handleResultSelect = (e, { result }) => this.setState({ value: result.name })
 
@@ -32,8 +28,6 @@ class SearchComponent extends Component {
       const isMatch = (result) => re.test(result.name)
       let searchResult = _.filter(this.props.users, isMatch)
 
-      console.log("search result : ", searchResult)
-
       this.setState({
         isLoading: false,
         results: searchResult
@@ -43,8 +37,6 @@ class SearchComponent extends Component {
 
   render() {
     const { isLoading, value, results } = this.state
-
-    console.log("results : ", results)
 
     return (
       <Grid>
@@ -67,8 +59,6 @@ class SearchComponent extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("users:  :", state.user);
-  
   return {
       users: state.users
   }

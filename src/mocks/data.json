@@ -1,0 +1,79 @@
+{
+    "users": [
+        {
+            "userId": 1,
+            "name": "Danial Aftab",
+            "avatar": "/avatars/small/elliot.jpg",
+            "image": "/avatars/large/matthew.png",
+            "connections": 21,
+            "description": "Danial is a musician living in Nashville.",
+            "joinedIn": "2017",
+            "organizations": [
+                {
+                    "name": "Pepsi",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        },
+        {
+            "userId": 2,
+            "name": "Peter Parker",
+            "avatar": "/avatars/small/elliot.jpg",
+            "image": "/avatars/large/peter.jpeg",
+            "connections": 16,
+            "description": "Danial is a musician living in Nashville.",
+            "joinedIn": "2017",
+            "organizations": [
+                {
+                    "name": "Pepsi",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        },
+        {
+            "userId": 3,
+            "name": "Bruce Wayne",
+            "avatar": "/avatars/small/elliot.jpg",
+            "image": "/avatars/large/bruce.jpeg",
+            "connections": 3,
+            "description": "Bruce is an entreprenuer living in Gotham.",
+            "joinedIn": "2017",
+            "organizations": [
+                {
+                    "name": "Wayne Enterprises",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        },
+        {
+            "userId": 4,
+            "name": "Tony Stark",
+            "avatar": "/avatars/small/elliot.jpg",
+            "image": "/avatars/large/tony.jpg",
+            "connections": 43,
+            "description": "Tony is the CEO of stark industries.",
+            "joinedIn": "2017",
+            "organizations": [
+                {
+                    "name": "Stark Industries",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        },
+        {
+            "userId": 5,
+            "name": "Selina Kyle",
+            "avatar": "/avatars/small/jenny.jpg",
+            "image": "/avatars/large/selina.png",
+            "connections": 24,
+            "description": "Selina is a performer living in Gotham.",
+            "joinedIn": "2017",
+            "organizations": [
+                {
+                    "name": "Acme inc",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        }
+    ]
+}

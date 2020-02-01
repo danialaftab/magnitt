@@ -1,24 +1,25 @@
 import React from 'react'
 import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
-const CardExampleCard = () => (
+const UserCard = (props) => {
+  let user = props.user
+  return (
   <Card>
-    <Image src='/avatars/large/matthew.png' wrapped ui={false} />
+    <Image src={user.image} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Matthew Vaughn</Card.Header>
+      <Card.Header>{user.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>Joined in 2015</span>
+        <span className='date'>Joined in {user.joinedIn}</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
-        
+        {user.description}
       </Card.Description>
       
     </Card.Content>
     <Card.Content extra>
       <a>
         <Icon name='user' />
-        22 Connections
+        {user.connections} Connections
       </a>
     </Card.Content>
 
@@ -27,5 +28,6 @@ const CardExampleCard = () => (
     </Card.Content>
   </Card>
 )
+  }
 
-export default CardExampleCard
+export default UserCard

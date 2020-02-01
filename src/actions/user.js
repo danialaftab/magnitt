@@ -1,15 +1,15 @@
 import UserApi from '../apis/user'
 
-export const GET_CART = Symbol("GET_CART");
-export const GET_CART_SUCCESS = Symbol("GET_CART_SUCCESS");
+export const GET_USER = Symbol("GET_USER");
+export const GET_USER_SUCCESS = Symbol("GET_USER_SUCCESS");
 
-export function getUser() {
+export function getUser(id) {
     return dispatch => {
         dispatch({
-            type: GET_CART
+            type: GET_USER
         });
         
-        return UserApi.getUser().then(res => {
+        return UserApi.getUser(id).then(res => {
             dispatch(onGetUser({}, res));
         });
     };
@@ -17,7 +17,7 @@ export function getUser() {
 
 function onGetUser(bodyPayload, payload) {
     return {
-        type: GET_CART_SUCCESS,
+        type: GET_USER_SUCCESS,
         bodyPayload,
         payload
     };

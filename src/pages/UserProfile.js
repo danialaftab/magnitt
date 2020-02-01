@@ -3,42 +3,46 @@ import { Grid, Container } from 'semantic-ui-react'
 import UserCard from '../components/user/UserCard'
 import UserOrganizations from '../components/user/UserOrganizations'
 import UserActivity from '../components/user/UserActivity'
-import { useParams } from "react-router-dom";
 import { connect } from 'react-redux'
 import { getUser } from "../actions/user";
-import { render } from '@testing-library/react';
 
 class UserProfile extends Component {
-    componentDidMount(){
-        let {getUser} = this.props
-        getUser()
+    state = {
+        user: {}
     }
 
-    getDerivedStateFromProps(nextProps, prevState){
-        console.log("new props:  ", nextProps)
-    //     if(nextProps.someValue!==prevState.someValue){
-    //       return { someState: nextProps.someValue};
-    //    }
-    //    else return null;
+    componentDidMount(){
+        let {getUser} = this.props
+        let userId = this.props.match.params.id  
+        getUser(userId)
+    }
+
+    componentWillReceiveProps(newProps) {
+        if(newProps.user){
+            this.setState({
+                user: newProps.user
+            })
+        }
     }
 
 
     render() {
-        // let { id } = useParams();
+        let {user} = this.state
+        
         return (
             <div>
                 <Grid columns={2} divided>
                     <Grid.Row>
                         <Grid.Column width={5}>
-                            <UserCard />
+                            <UserCard user={user} />
                         </Grid.Column>
                         <Grid.Column width={11}>
-                            <UserActivity />
+                            <UserActivity user={user} />
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column width={12}>
-                            <UserOrganizations />
+                            <UserOrganizations organizations={user.organizations} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -48,8 +52,6 @@ class UserProfile extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log("users:  :", state.user);
-
     return {
         user: state.user
     }
