@@ -30,9 +30,9 @@ export default class MenuExampleInvertedSecondary extends Component {
                         />
                     </Link>
 
-                    <Link to="/user">
+                    <Link to="/connections">
                         <Menu.Item
-                            name='friends'
+                            name='connections'
                             active={activeItem === 'friends'}
                             onClick={this.handleItemClick}
                         />

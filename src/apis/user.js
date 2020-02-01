@@ -1,6 +1,6 @@
 import mockData from '../mocks/data.json'
 
-//Creating mock api calls with 2 seconds of delay
+//Creating mock api calls with 1 seconds of delay
 
 const UserApi = {
     getUser: (id) => {

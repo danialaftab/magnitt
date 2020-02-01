@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Switch>
           <MainLayout path="/user/:id" component={UserProfile} />
-          <MainLayout path="/organization" component={OrganizationProfile} />
+          <MainLayout path="/organization/:id" component={OrganizationProfile} />
           <MainLayout path="/messages" component={Messages} />
           <MainLayout path="/" component={Home} />
       </Switch>

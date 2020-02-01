@@ -1,20 +1,34 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Search, Grid, Label } from 'semantic-ui-react'
-import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
+import { searchAll } from "../../actions/search";
 
 const initialState = { isLoading: false, results: [], value: '' }
 
 class SearchComponent extends Component {
   state = initialState
-  
-  resultRenderer = (user) => {
-    return(
-      <a href={`/user/${user.userId}`}><Label content={user.name} /></a>
+
+  resultRenderer = (searchResult) => {
+    if (searchResult.type == 'user')
+      return (
+        <a href={`/user/${searchResult.userId}`}><Label content={searchResult.name} /></a>
+      )
+    else if (searchResult.type == 'organization') 
+    return (
+      <a href={`/organization/${searchResult.org_id}`}><Label content={searchResult.name + ' (org)'} /></a>
     )
+      
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.searchResults) {
+      this.setState({
+        isLoading: false,
+        results: newProps.searchResults
+      })
+    }
+  }
 
   handleResultSelect = (e, { result }) => this.setState({ value: result.name })
 
@@ -24,14 +38,8 @@ class SearchComponent extends Component {
     setTimeout(() => {
       if (this.state.value.length < 1) return this.setState(initialState)
 
-      const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-      const isMatch = (result) => re.test(result.name)
-      let searchResult = _.filter(this.props.users, isMatch)
-
-      this.setState({
-        isLoading: false,
-        results: searchResult
-      })
+      let { searchAll } = this.props
+      searchAll(this.state.value)
     }, 300)
   }
 
@@ -60,8 +68,15 @@ class SearchComponent extends Component {
 
 const mapStateToProps = (state) => {
   return {
-      users: state.users
+    searchResults: state.searchResults
   }
 }
 
-export default connect(mapStateToProps)(SearchComponent);
+const mapDispatchToProps = {
+  searchAll
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchComponent);

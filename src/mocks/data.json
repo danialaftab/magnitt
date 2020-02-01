@@ -2,6 +2,7 @@
     "users": [
         {
             "userId": 1,
+            "type" : "user",
             "name": "Danial Aftab",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/matthew.png",
@@ -10,7 +11,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
-                    "name": "Pepsi",
+                    "name": "Pepsi Co",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
             ]
@@ -18,6 +19,7 @@
         {
             "userId": 2,
             "name": "Peter Parker",
+            "type" : "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/peter.jpeg",
             "connections": 16,
@@ -25,7 +27,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
-                    "name": "Pepsi",
+                    "name": "Pepsi Co",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
             ]
@@ -33,6 +35,7 @@
         {
             "userId": 3,
             "name": "Bruce Wayne",
+            "type" : "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/bruce.jpeg",
             "connections": 3,
@@ -48,6 +51,7 @@
         {
             "userId": 4,
             "name": "Tony Stark",
+            "type" : "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/tony.jpg",
             "connections": 43,
@@ -63,6 +67,7 @@
         {
             "userId": 5,
             "name": "Selina Kyle",
+            "type" : "user",
             "avatar": "/avatars/small/jenny.jpg",
             "image": "/avatars/large/selina.png",
             "connections": 24,
@@ -75,5 +80,41 @@
                 }
             ]
         }
+    ],
+    "organizations" : [
+        {
+            "org_id": 1,
+            "name": "Acme inc",
+            "image": "/avatars/orgs/acme.svg",
+            "type" : "organization",
+            "connections": 240,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+        },
+        {
+            "org_id": 2,
+            "name": "Stark Industries",
+            "image": "/avatars/orgs/stark.jpg",
+            "type" : "organization",
+            "connections": 124,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+        },
+        {
+            "org_id": 3,
+            "name": "Wayne Enterprises",
+            "image": "/avatars/orgs/wayne.png",
+            "type" : "organization",
+            "connections": 254,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+        },
+        {
+            "org_id": 4,
+            "name": "Pepsi Co",
+            "type" : "organization",
+            "image": "/avatars/orgs/pepsi.jpg",
+            "connections": 249,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+        }
+
+
     ]
 }

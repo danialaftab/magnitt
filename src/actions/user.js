@@ -1,7 +1,7 @@
 import UserApi from '../apis/user'
 
-export const GET_USER = Symbol("GET_USER");
-export const GET_USER_SUCCESS = Symbol("GET_USER_SUCCESS");
+export const GET_USER = Symbol("GET_USER")
+export const GET_USER_SUCCESS = Symbol("GET_USER_SUCCESS")
 
 export function getUser(id) {
     return dispatch => {
