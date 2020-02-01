@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Switch>
-          <MainLayout path="/user" component={UserProfile} />
+          <MainLayout path="/user/:id" component={UserProfile} />
           <MainLayout path="/organization" component={OrganizationProfile} />
           <MainLayout path="/messages" component={Messages} />
           <MainLayout path="/" component={Home} />

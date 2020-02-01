@@ -1,21 +1,26 @@
 import _ from 'lodash'
-import faker from 'faker'
 import React, { Component } from 'react'
-import { Search, Grid, Header, Segment } from 'semantic-ui-react'
+import { Search, Grid, Label } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux'
 
 const initialState = { isLoading: false, results: [], value: '' }
 
-const source = _.times(5, () => ({
-  title: faker.company.companyName(),
-  description: faker.company.catchPhrase(),
-  image: faker.internet.avatar(),
-  price: faker.finance.amount(0, 100, 2, '$'),
-}))
-
-export default class SearchExampleStandard extends Component {
+class SearchComponent extends Component {
   state = initialState
+  
+  resultRenderer = (user) => {
+    console.log("RR: ", user)
+    return(
+      <Link to={`/user/${user.userId}`}><Label content={user.name} /></Link>
+    )
+  }
 
-  handleResultSelect = (e, { result }) => this.setState({ value: result.title })
+  static getDerivedStateFromProps(nextProps, prevState){
+      console.log("nextProps: ", nextProps)
+ }
+
+  handleResultSelect = (e, { result }) => this.setState({ value: result.name })
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value })
@@ -24,17 +29,22 @@ export default class SearchExampleStandard extends Component {
       if (this.state.value.length < 1) return this.setState(initialState)
 
       const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-      const isMatch = (result) => re.test(result.title)
+      const isMatch = (result) => re.test(result.name)
+      let searchResult = _.filter(this.props.users, isMatch)
+
+      console.log("search result : ", searchResult)
 
       this.setState({
         isLoading: false,
-        results: _.filter(source, isMatch),
+        results: searchResult
       })
     }, 300)
   }
 
   render() {
     const { isLoading, value, results } = this.state
+
+    console.log("results : ", results)
 
     return (
       <Grid>
@@ -47,22 +57,21 @@ export default class SearchExampleStandard extends Component {
             })}
             results={results}
             value={value}
+            resultRenderer={this.resultRenderer}
             {...this.props}
           />
         </Grid.Column>
-        {/* <Grid.Column width={10}>
-          <Segment>
-            <Header>State</Header>
-            <pre style={{ overflowX: 'auto' }}>
-              {JSON.stringify(this.state, null, 2)}
-            </pre>
-            <Header>Options</Header>
-            <pre style={{ overflowX: 'auto' }}>
-              {JSON.stringify(source, null, 2)}
-            </pre>
-          </Segment>
-        </Grid.Column> */}
       </Grid>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  console.log("users:  :", state.user);
+  
+  return {
+      users: state.users
+  }
+}
+
+export default connect(mapStateToProps)(SearchComponent);
