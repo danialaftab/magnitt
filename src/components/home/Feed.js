@@ -4,7 +4,7 @@ import { Feed } from 'semantic-ui-react'
 const image = '/avatars/small/elliot.jpg'
 const date = '3 days ago'
 const summary = 'Laura Faucet created a post'
-const extraText = "Have you seen what's going on in Israel? Can you believe it."
+const extraText = "But the best part of doing this exercise is that you will never run out of ideas to write about. "
 
 const FeedExampleExtraTextShorthand = () => (
   <Feed>
