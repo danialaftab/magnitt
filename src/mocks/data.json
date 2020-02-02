@@ -2,7 +2,7 @@
     "users": [
         {
             "userId": 1,
-            "type" : "user",
+            "type": "user",
             "name": "Danial Aftab",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/matthew.png",
@@ -11,6 +11,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
+                    "userId": 9,
                     "name": "Pepsi Co",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
@@ -19,7 +20,7 @@
         {
             "userId": 2,
             "name": "Peter Parker",
-            "type" : "user",
+            "type": "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/peter.jpeg",
             "connections": 16,
@@ -27,6 +28,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
+                    "userId": 9,
                     "name": "Pepsi Co",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
@@ -35,7 +37,7 @@
         {
             "userId": 3,
             "name": "Bruce Wayne",
-            "type" : "user",
+            "type": "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/bruce.jpeg",
             "connections": 3,
@@ -43,6 +45,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
+                    "userId": 8,
                     "name": "Wayne Enterprises",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
@@ -51,7 +54,7 @@
         {
             "userId": 4,
             "name": "Tony Stark",
-            "type" : "user",
+            "type": "user",
             "avatar": "/avatars/small/elliot.jpg",
             "image": "/avatars/large/tony.jpg",
             "connections": 43,
@@ -59,6 +62,7 @@
             "joinedIn": "2017",
             "organizations": [
                 {
+                    "userId": 7,
                     "name": "Stark Industries",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
@@ -67,7 +71,7 @@
         {
             "userId": 5,
             "name": "Selina Kyle",
-            "type" : "user",
+            "type": "user",
             "avatar": "/avatars/small/jenny.jpg",
             "image": "/avatars/large/selina.png",
             "connections": 24,
@@ -75,46 +79,169 @@
             "joinedIn": "2017",
             "organizations": [
                 {
+                    "userId": 6,
                     "name": "Acme inc",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
                 }
             ]
         }
     ],
-    "organizations" : [
+    "organizations": [
         {
-            "org_id": 1,
+            "userId": 6,
             "name": "Acme inc",
             "image": "/avatars/orgs/acme.svg",
-            "type" : "organization",
+            "type": "organization",
             "connections": 240,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
         },
         {
-            "org_id": 2,
+            "userId": 7,
             "name": "Stark Industries",
             "image": "/avatars/orgs/stark.jpg",
-            "type" : "organization",
+            "type": "organization",
             "connections": 124,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
         },
         {
-            "org_id": 3,
+            "userId": 8,
             "name": "Wayne Enterprises",
             "image": "/avatars/orgs/wayne.png",
-            "type" : "organization",
+            "type": "organization",
             "connections": 254,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
         },
         {
-            "org_id": 4,
+            "userId": 9,
             "name": "Pepsi Co",
-            "type" : "organization",
+            "type": "organization",
             "image": "/avatars/orgs/pepsi.jpg",
             "connections": 249,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
         }
-
-
+    ],
+    "myAccounts": [
+        {
+            "type": "user",
+            "id": 1,
+            "name": "Danial Aftab",
+            "isActive": true,
+            "connections": [
+                {
+                    "userId": 4,
+                    "name": "Tony Stark",
+                    "type": "user",
+                    "avatar": "/avatars/small/elliot.jpg",
+                    "status": "Connected",
+                    "image": "/avatars/large/tony.jpg",
+                    "connections": 43,
+                    "description": "Tony is the CEO of stark industries.",
+                    "joinedIn": "2017",
+                    "organizations": [
+                        {
+                            "userId": 7,
+                            "name": "Stark Industries",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                        }
+                    ]
+                },
+                {
+                    "userId": 8,
+                    "name": "Wayne Enterprises",
+                    "status": "Connected",
+                    "image": "/avatars/orgs/wayne.png",
+                    "type": "organization",
+                    "connections": 254,
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                }
+            ]
+        },
+        {
+            "type": "organization",
+            "id": 7,
+            "isActive": false,
+            "name": "Stark Industries",
+            "connections": [
+                {
+                    "userId": 4,
+                    "name": "Tony Stark",
+                    "type": "user",
+                    "avatar": "/avatars/small/elliot.jpg",
+                    "image": "/avatars/large/tony.jpg",
+                    "connections": 43,
+                    "status": "Connected",
+                    "description": "Tony is the CEO of stark industries.",
+                    "joinedIn": "2017",
+                    "organizations": [
+                        {
+                            "userId": 7,
+                            "name": "Stark Industries",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                        }
+                    ]
+                },
+                {
+                    "userId": 5,
+                    "name": "Selina Kyle",
+                    "type": "user",
+                    "avatar": "/avatars/small/jenny.jpg",
+                    "image": "/avatars/large/selina.png",
+                    "connections": 24,
+                    "status": "Requested",
+                    "description": "Selina is a performer living in Gotham.",
+                    "joinedIn": "2017",
+                    "organizations": [
+                        {
+                            "userId": 6,
+                            "name": "Acme inc",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed justo sed massa volutpat mollis at eu augue. Quisque molestie, arcu sed accumsan dignnnisl sit amet justo. Suspendisse blandit lacus sed mollis posuere. "
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "requests": [
+        {
+            "type": "user",
+            "id": 1,
+            "name": "Danial Aftab",
+            "isActive": true,
+            "requests": [
+                {   "requestId" : 1,
+                    "userId": 2,
+                    "name": "Peter Parker",
+                    "type": "user",
+                    "avatar": "/avatars/small/elliot.jpg",
+                    "image": "/avatars/large/peter.jpeg",
+                    "connections": 16
+                }
+            ]
+        },
+        {
+            "type": "organization",
+            "id": 7,
+            "isActive": false,
+            "name": "Stark Industries",
+            "requests": [
+                {
+                    "requestId" : 2,
+                    "userId": 5,
+                    "name": "Selina Kyle",
+                    "type": "user",
+                    "avatar": "/avatars/small/jenny.jpg",
+                    "image": "/avatars/large/selina.png",
+                    "connections": 24
+                },
+                {
+                    "requestId" : 3,
+                    "userId": 3,
+                    "name": "Bruce Wayne",
+                    "type": "user",
+                    "avatar": "/avatars/small/elliot.jpg",
+                    "connections": 3
+                }
+            ]
+        }
     ]
 }

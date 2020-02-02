@@ -16,7 +16,7 @@ class SearchComponent extends Component {
       )
     else if (searchResult.type == 'organization') 
     return (
-      <a href={`/organization/${searchResult.org_id}`}><Label content={searchResult.name + ' (org)'} /></a>
+      <a href={`/organization/${searchResult.userId}`}><Label content={searchResult.name + ' (org)'} /></a>
     )
       
   }

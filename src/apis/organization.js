@@ -7,7 +7,7 @@ const OrganizationApi = {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 let organization = mockData.organizations.find(item => {
-                    return (item.org_id == id)
+                    return (item.userId == id)
                 })
                 resolve(organization)
             }, 1000)
